@@ -1,0 +1,29 @@
+print("PERSONAL EXPENSE TRACKER")
+
+name = input("Enter your name: ")
+budget = float(input("Enter your budget: "))
+
+food = float(input("Enter food expenses: "))
+transport = float(input("Enter transportation expenses: "))
+school = float(input("Enter school expenses: "))
+other = float(input("Enter other expenses: "))
+
+total = food + transport + school + other
+balance = budget - total
+
+print("\n===== EXPENSE SUMMARY =====")
+print("Name:", name)
+print("Total Budget: ₱", budget)
+print("Food: ₱", food)
+print("Transportation: ₱", transport)
+print("School: ₱", school)
+print("Other Expenses: ₱", other)
+print("Total Expenses: ₱", total)
+print("Remaining Balance: ₱", balance)
+
+if balance > 0:
+    print("Status: Within Budget")
+elif balance == 0:
+    print("Status: Budget Fully Used")
+else:
+    print("Status: Over Budget")
